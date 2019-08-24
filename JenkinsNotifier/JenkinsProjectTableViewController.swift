@@ -1,5 +1,5 @@
 //
-//  JenkinsTableViewController.swift
+//  JenkinsProjectTableViewController.swift
 //  JenkinsNotifier
 //
 //  Created by Ryan Lokugamage on 8/24/19.
@@ -8,30 +8,39 @@
 
 import UIKit
 
-class JenkinsTableViewController: UITableViewController {
-    var jenkinsProjectList = [JenkinsProject]()
+class JenkinsProjectTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var buildList = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        jenkinsProjectList.append(JenkinsProject(name: "Jenkins Name", location: URL(string: "http://localhost:8080/")))
+        buildList = ["Build 1"]
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return jenkinsProjectList.count
+        return buildList.count
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "jenkinsProject", for: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "jenkinsBuild", for: indexPath)
+        if let cell = cell as? JenkinsBuildTableViewCell {
+            cell.buildName.text = buildList[indexPath.row]
+            cell.buildStatus.text = "SUCCEED"
+        }
+        // Configure the cell...
 
-        cell.textLabel?.text = jenkinsProjectList[indexPath.row].name
-        cell.detailTextLabel?.text = jenkinsProjectList[indexPath.row].location?.absoluteString
         return cell
     }
 
@@ -75,8 +84,9 @@ class JenkinsTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
     */
-    
+
 }

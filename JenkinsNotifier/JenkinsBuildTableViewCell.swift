@@ -9,8 +9,8 @@
 import UIKit
 
 class JenkinsBuildTableViewCell: UITableViewCell {
-    @IBOutlet weak var buildName: UITextField!
-    @IBOutlet weak var buildStatus: UITextField!
+    @IBOutlet weak var buildName: UILabel!
+    @IBOutlet weak var buildStatus: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
