@@ -60,6 +60,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		944F79972311CD2A00FC8C4F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		94D072572300F6CA0091FC46 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +88,7 @@
 		94D072622300F6CA0091FC46 /* JenkinsNotifier */ = {
 			isa = PBXGroup;
 			children = (
+				944F79972311CD2A00FC8C4F /* Models */,
 				94D072632300F6CA0091FC46 /* AppDelegate.swift */,
 				94D072672300F6CA0091FC46 /* Main.storyboard */,
 				94D0726D2300F6CC0091FC46 /* Assets.xcassets */,
