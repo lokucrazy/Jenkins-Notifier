@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		944F79942311B3C400FC8C4F /* JenkinsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F79932311B3C400FC8C4F /* JenkinsTableViewController.swift */; };
+		944F79962311C7CF00FC8C4F /* JenkinsBuildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944F79952311C7CF00FC8C4F /* JenkinsBuildTableViewCell.swift */; };
 		94D072642300F6CA0091FC46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D072632300F6CA0091FC46 /* AppDelegate.swift */; };
-		94D072662300F6CA0091FC46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D072652300F6CA0091FC46 /* ViewController.swift */; };
 		94D072692300F6CA0091FC46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D072672300F6CA0091FC46 /* Main.storyboard */; };
 		94D0726C2300F6CA0091FC46 /* JenkinsNotifier.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94D0726A2300F6CA0091FC46 /* JenkinsNotifier.xcdatamodeld */; };
 		94D0726E2300F6CC0091FC46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94D0726D2300F6CC0091FC46 /* Assets.xcassets */; };
@@ -27,9 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		944F79932311B3C400FC8C4F /* JenkinsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JenkinsTableViewController.swift; sourceTree = "<group>"; };
+		944F79952311C7CF00FC8C4F /* JenkinsBuildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JenkinsBuildTableViewCell.swift; sourceTree = "<group>"; };
 		94D072602300F6CA0091FC46 /* JenkinsNotifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JenkinsNotifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D072632300F6CA0091FC46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		94D072652300F6CA0091FC46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		94D072682300F6CA0091FC46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		94D0726B2300F6CA0091FC46 /* JenkinsNotifier.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JenkinsNotifier.xcdatamodel; sourceTree = "<group>"; };
 		94D0726D2300F6CC0091FC46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,12 +82,13 @@
 			isa = PBXGroup;
 			children = (
 				94D072632300F6CA0091FC46 /* AppDelegate.swift */,
-				94D072652300F6CA0091FC46 /* ViewController.swift */,
 				94D072672300F6CA0091FC46 /* Main.storyboard */,
 				94D0726D2300F6CC0091FC46 /* Assets.xcassets */,
 				94D0726F2300F6CC0091FC46 /* LaunchScreen.storyboard */,
 				94D072722300F6CC0091FC46 /* Info.plist */,
 				94D0726A2300F6CA0091FC46 /* JenkinsNotifier.xcdatamodeld */,
+				944F79932311B3C400FC8C4F /* JenkinsTableViewController.swift */,
+				944F79952311C7CF00FC8C4F /* JenkinsBuildTableViewCell.swift */,
 			);
 			path = JenkinsNotifier;
 			sourceTree = "<group>";
@@ -200,9 +203,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94D072662300F6CA0091FC46 /* ViewController.swift in Sources */,
+				944F79942311B3C400FC8C4F /* JenkinsTableViewController.swift in Sources */,
 				94D0726C2300F6CA0091FC46 /* JenkinsNotifier.xcdatamodeld in Sources */,
 				94D072642300F6CA0091FC46 /* AppDelegate.swift in Sources */,
+				944F79962311C7CF00FC8C4F /* JenkinsBuildTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
