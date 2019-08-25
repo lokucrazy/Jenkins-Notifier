@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import RealmSwift
 
 class JenkinsTableViewController: UITableViewController {
-    var jenkinsProjectList = [JenkinsProject]()
+    var jenkinsProjectList: Results<JenkinsProject>?
+    let realm = try! Realm()
     override func viewDidLoad() {
         super.viewDidLoad()
-        jenkinsProjectList.append(JenkinsProject(name: "Jenkins Name", location: URL(string: "http://localhost:8080/")))
+        try! realm.write {
+            if let url = URL(string: "http://locahost:8080/api") {
+                realm.add(JenkinsProject("Jenkins Project", url))
+            }
+        }
+        jenkinsProjectList = realm.objects(JenkinsProject.self)
     }
 
     // MARK: - Table view data source
@@ -24,14 +31,15 @@ class JenkinsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return jenkinsProjectList.count
+        return jenkinsProjectList?.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "jenkinsProject", for: indexPath)
-
-        cell.textLabel?.text = jenkinsProjectList[indexPath.row].name
-        cell.detailTextLabel?.text = jenkinsProjectList[indexPath.row].location?.absoluteString
+        if let project = jenkinsProjectList?[indexPath.row] {
+            cell.textLabel?.text = project.name
+            cell.detailTextLabel?.text = project.url?.absoluteString
+        }
         return cell
     }
 
