@@ -104,6 +104,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="u5i-RE-lEa" firstAttribute="trailing" secondItem="M4b-ce-26B" secondAttribute="trailing" constant="285.5" id="Amc-xF-YSN"/>
                             <constraint firstItem="BLt-sA-GSd" firstAttribute="top" secondItem="sJr-mZ-NxN" secondAttribute="bottom" constant="8" id="BZt-TO-K8p"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sJr-mZ-NxN" secondAttribute="trailing" id="Bic-2M-l4X"/>
                             <constraint firstItem="RQd-8l-DYc" firstAttribute="top" secondItem="M4b-ce-26B" secondAttribute="bottom" constant="8" id="DGU-eX-X8F"/>
@@ -111,8 +112,10 @@
                             <constraint firstItem="wgT-6J-Bzn" firstAttribute="top" secondItem="RQd-8l-DYc" secondAttribute="bottom" constant="23" id="ObC-er-RUi"/>
                             <constraint firstItem="RQd-8l-DYc" firstAttribute="leading" secondItem="u5i-RE-lEa" secondAttribute="leading" constant="20" id="SDS-dR-7VQ"/>
                             <constraint firstItem="M4b-ce-26B" firstAttribute="leading" secondItem="u5i-RE-lEa" secondAttribute="leading" constant="20" id="Vf4-8b-437"/>
+                            <constraint firstItem="u5i-RE-lEa" firstAttribute="trailing" secondItem="wgT-6J-Bzn" secondAttribute="trailing" constant="323" id="XR8-4d-QJw"/>
                             <constraint firstItem="BLt-sA-GSd" firstAttribute="leading" secondItem="u5i-RE-lEa" secondAttribute="leading" constant="20" id="YOe-7x-8vG"/>
                             <constraint firstItem="M4b-ce-26B" firstAttribute="top" secondItem="u5i-RE-lEa" secondAttribute="top" constant="22" id="eBr-m5-r3g"/>
+                            <constraint firstItem="u5i-RE-lEa" firstAttribute="trailing" secondItem="BLt-sA-GSd" secondAttribute="trailing" constant="336" id="iCN-FX-oRI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RQd-8l-DYc" secondAttribute="trailing" id="pyb-5X-Li5"/>
                             <constraint firstItem="sJr-mZ-NxN" firstAttribute="leading" secondItem="u5i-RE-lEa" secondAttribute="leading" constant="20" id="q4g-Uq-08D"/>
                             <constraint firstItem="sJr-mZ-NxN" firstAttribute="top" secondItem="wgT-6J-Bzn" secondAttribute="bottom" constant="8" id="xVd-3Y-JSP"/>
@@ -136,11 +139,11 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="jenkinsBuild" rowHeight="153" id="t6H-cw-Kh6" customClass="JenkinsBuildTableViewCell" customModule="JenkinsNotifier" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="153"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="jenkinsBuild" rowHeight="120" id="t6H-cw-Kh6" customClass="JenkinsBuildTableViewCell" customModule="JenkinsNotifier" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t6H-cw-Kh6" id="5d3-XV-KqA">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="152.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Build Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acy-lJ-EFS">
@@ -189,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lJu-dt-BWJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2129" y="1171"/>
+            <point key="canvasLocation" x="2128.985507246377" y="1170.5357142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bGI-an-HkT">

@@ -43,6 +43,10 @@ class JenkinsProjectTableViewController: UIViewController, UITableViewDelegate, 
 
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
 
     /*
     // Override to support conditional editing of the table view.
