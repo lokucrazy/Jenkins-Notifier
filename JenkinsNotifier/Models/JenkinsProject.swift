@@ -29,6 +29,6 @@ class JenkinsProject: Object {
     }
     
     func retrieveRecentBuilds() -> [JenkinsBuild] {
-        return []
+        return [JenkinsBuild("Build 1", "SUCCEEDED")]
     }
 }

@@ -43,7 +43,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ONe-iE-MDD" kind="show" identifier="" id="ZgQ-Mf-lb4"/>
+                                    <segue destination="ONe-iE-MDD" kind="show" identifier="segueBuilds" id="ZgQ-Mf-lb4"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="1326.0869565217392" y="767.41071428571422"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Project View Controller-->
         <scene sceneID="S8q-E0-SdY">
             <objects>
-                <viewController id="kMI-FU-fDt" sceneMemberID="viewController">
+                <viewController id="kMI-FU-fDt" customClass="AddProjectViewController" customModule="JenkinsNotifier" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nbP-j4-UGl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,6 +100,9 @@
                                 <rect key="frame" x="20" y="259" width="58" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="addProject:" destination="kMI-FU-fDt" eventType="touchUpInside" id="MEb-YH-Vvf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -122,6 +125,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="u5i-RE-lEa"/>
                     </view>
+                    <connections>
+                        <outlet property="projectLocationField" destination="sJr-mZ-NxN" id="ZY4-lR-alh"/>
+                        <outlet property="projectNameField" destination="RQd-8l-DYc" id="9gT-fo-dlm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2an-HX-ANY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

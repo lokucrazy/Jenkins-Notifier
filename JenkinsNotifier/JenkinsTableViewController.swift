@@ -11,26 +11,19 @@ import RealmSwift
 
 class JenkinsTableViewController: UITableViewController {
     var jenkinsProjectList: Results<JenkinsProject>?
-    let realm = try! Realm()
     override func viewDidLoad() {
         super.viewDidLoad()
-        try! realm.write {
-            if let url = URL(string: "http://locahost:8080/api") {
-                realm.add(JenkinsProject("Jenkins Project", url))
-            }
-        }
+        let realm = try! Realm()
         jenkinsProjectList = realm.objects(JenkinsProject.self)
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return jenkinsProjectList?.count ?? 0
     }
 
@@ -78,13 +71,18 @@ class JenkinsTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        print("Got to segue")
+        if let destination = segue.destination as? JenkinsProjectTableViewController {
+            if segue.identifier == "segueBuilds", let index = tableView.indexPathForSelectedRow {
+                if let project = jenkinsProjectList?[index.row] {
+                    destination.buildList = project.retrieveRecentBuilds()
+                }
+            }
+        }
     }
-    */
     
 }

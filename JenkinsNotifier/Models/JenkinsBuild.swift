@@ -12,4 +12,10 @@ import RealmSwift
 class JenkinsBuild: Object {
     @objc dynamic var name: String?
     @objc dynamic var status: String?
+    
+    convenience init(_ name: String, _ status: String) {
+        self.init()
+        self.name = name
+        self.status = status
+    }
 }

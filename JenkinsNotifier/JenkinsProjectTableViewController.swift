@@ -9,11 +9,10 @@
 import UIKit
 
 class JenkinsProjectTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var buildList = [String]()
+    var buildList = [JenkinsBuild]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        buildList = ["Build 1"]
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -36,7 +35,7 @@ class JenkinsProjectTableViewController: UIViewController, UITableViewDelegate, 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "jenkinsBuild", for: indexPath)
         if let cell = cell as? JenkinsBuildTableViewCell {
-            cell.buildName.text = buildList[indexPath.row]
+            cell.buildName.text = buildList[indexPath.row].name
             cell.buildStatus.text = "SUCCEED"
         }
         // Configure the cell...
