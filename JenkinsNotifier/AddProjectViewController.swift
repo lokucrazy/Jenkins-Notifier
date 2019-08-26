@@ -16,28 +16,35 @@ class AddProjectViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func addProject(_ sender: Any) {
         let realm = try! Realm()
         try! realm.write {
-            if let name = projectLocationField?.text, let location = projectLocationField?.text {
-                if let url = URL(string: location) {
+            if let name = projectNameField?.text, let location = projectLocationField?.text {
+                if let url = validate(url: location){
                     realm.add(JenkinsProject(name, url))
+                    self.performSegue(withIdentifier: "submitProject", sender: self)
                 }
             }
         }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func validate(url: String) -> URL? {
+        guard url.count > 7 else {
+            return nil
+        }
+        
+        let index = url.index(url.startIndex, offsetBy: 7)
+        if url[..<index] == "http://" {
+            let api1 = url.index(url.endIndex, offsetBy: -4)
+            let api2 = url.index(url.endIndex, offsetBy: -5)
+            if url[api1...] == "/api" || url[api2...] == "/api/" {
+                return URL(string: url)
+            } else {
+                return URL(string: url + "/api")
+            }
+        }
+        return nil
     }
-    */
-
 }
